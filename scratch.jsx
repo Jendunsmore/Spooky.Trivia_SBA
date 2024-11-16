@@ -1,6 +1,5 @@
 // Requirements for SBA:
-
-// MVP:
+// MVP:-----------------------------------------------------------------------------------
 // 1. Built with JavaScript, REACT, and VITE
 // 2. Frequent Commits to <GitHub></GitHub>
 // 3. A README.md file in GitHub repo with:
@@ -22,9 +21,8 @@
 //      Data / Presentation / Views / Style / DOM manipulation
 // * Remember to have: Creativity, Code Quality, Problem Solving
 //---------------------------------------------------------------------------------------
-//---------------------------------------------------------------------------------------
 
-// Components:
+// Components:----------------------------------------------------------------------------
 // * App Component:
 // - main wrapper & router
 // - holds state variables for quiz & data -> child props
@@ -40,12 +38,27 @@
 // * FunFact Component:
 // - pops up random Halloween themed fun facts after each question
 // - done by storing facts in JSON file in data folder -> loading them
-
 //----------------------------------------------------------------------------------------
-// Installation set up:
+
+// Installation set up:-------------------------------------------------------------------
 // new file
 // npm vite@latest .
 // npm react-router-dom
 // npm axios
 // npm install i (?)
 // npm run dev (to run env. : localhost:5173)
+
+
+
+
+
+//======================== NOTES ==============================
+// * API for trivia questions: Trivia Database (axios)
+
+// * After question is answered (answer has been submitted) "Fun Fact" will pop up temp.
+// then the next question will appear.
+
+
+
+
+//---------------------------------------------------------------------------------------
