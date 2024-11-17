@@ -14,11 +14,11 @@ const Quiz = () => {
 
     useEffect(() => {
         axios
-            .get('https://opentdb.com/api.php?amount=10&category=11&type=multiple')
-            .then((response) => {
+            .get('https://opentdb.com/api.php?amount=10&category=11&type=multiple') // <- will need to UPDATE! still need to make trivia page within app api
+            .then((response) => {                                                 // add correct link info w/ correct questions!!!! ***
                 const formattedQuestions = response.data.results.map((item) => ({
                     question: item.question,
-                    options: [...item.correct_answers, item.correct_answer].sort(() => Math.random() - 0.5),
+                    options: [...item.incorrect_answers, item.correct_answer].sort(() => Math.random() - 0.5),
                     correctAnswer: item.correct_answer,
                 }));
                 setQuestions(formattedQuestions);

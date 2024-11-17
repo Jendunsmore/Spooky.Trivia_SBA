@@ -6,7 +6,9 @@
 // to false.
 
 import React, { useEffect, useState } from 'react';
-// import funFacts from '../data/funFacts';
+import funFacts from '../data/funFacts';
+
+
 
 const FunFact = () => {
     const [fact, setFact] = useState("");
