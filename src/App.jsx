@@ -1,24 +1,13 @@
-// Main component!!
+import React from "react";
+import TriviaGame from "./components/TriviaGame";
+import Carousel from "./components/Carousel";
 
-import React, { useState } from 'react';
-import Quiz from './components/Quiz';
-import Question from './components/Question';
-import Score from './components/Score';
-
-const App = () => {
-  const [showQuiz, setShowQuiz] = useState(true);
-  const [score, setScore] = useState(0);
-
-  return (
+const App = () => (
     <div>
-      <h1>Welcome to the Spooky Trivia App</h1>
-      {showQuiz ? (
-        <Quiz />
-      ) : (
-        <Score score={score} />
-      )}
+        <h1>Spooky Halloween Trivia</h1>
+        <TriviaGame />
+        <Carousel />
     </div>
-  );
-};
+);
 
 export default App;
