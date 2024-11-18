@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { fetchGifs } from "./api";
 
-const GifCarousel = () => {
+const Carousel = () => {
     const [gifs, setGifs] = useState([]);
 
     useEffect(() => {
@@ -37,4 +37,4 @@ const GifCarousel = () => {
     );
 };
 
-export default GifCarousel;
+export default Carousel;
