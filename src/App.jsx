@@ -1,13 +1,13 @@
-import React from "react";
-import TriviaGame from "./components/TriviaGame";
-import Carousel from "./components/Carousel";
+import React, { useState } from 'react';
+import GamePage from './pages/GamePage';
 
-const App = () => (
-    <div>
-        <h1>Spooky Halloween Trivia</h1>
-        <TriviaGame />
-        <Carousel />
-    </div>
-);
+function App() {
+    return (
+        <div className='app'>
+            <h1>Halloween Trivia Game</h1>
+            <GamePage />
+        </div>
+    );
+}
 
 export default App;

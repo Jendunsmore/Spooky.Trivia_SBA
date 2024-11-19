@@ -23,10 +23,12 @@
 //---------------------------------------------------------------------------------------
 
 // Components:----------------------------------------------------------------------------
-// * App Component:
+// * App.jsx:
 // - main wrapper & router
+
+
 // - holds state variables for quiz & data -> child props
-// * Quiz Component:
+// * :
 // - Fetches trivia questions via AJAX. manages quiz's state (current question, answers, score)
 // - renders Question, Score, & FunFact components
 // * Question Component:
@@ -53,7 +55,7 @@
 
 
 //======================== NOTES ==============================
-// * API for trivia questions: Trivia Database (axios)
+// * API for GIFs from Giphy (axios)
 
 // * After question is answered (answer has been submitted) "Fun Fact" will pop up temp.
 // then the next question will appear.
@@ -95,7 +97,7 @@
 // and fortune-telling.
 
 // 8. One of the most popular forms ofr Halloween fortune-telling incolved using a mirror
-// to discover the identity of one's furture husband. Although it had many variations,
+// to discover the identity of one's future husband. Although it had many variations,
 // a typical method involved sitting before a mirror at midnight on Halloween, eating
 // an apple and brushing one's hair; supposedly an image of your loved one would appear
 // in the glass.
@@ -110,3 +112,27 @@
 // genuine "Halloween Sadism", i.e. poisoned candy or razor-blade-hiding apples.
 
 // citation: https://halloween.lisamorton.com/trivia.html
+
+
+
+//-----------------------------
+//Game Logic
+//Game Flow:
+//Load questions and answers.
+//Display one question at a time.
+//After each question, show a random fact and fetch a Halloween GIF.
+//Keep track of the score.
+//Display a "spookiness level" at the end based on the score.
+
+//Scoring:
+//0-4: "Spooky Amateur"
+//5-8: "Creepy Connoisseur"
+//9+: "Halloween Master"
+
+//Random Facts:
+//Create a local array of Halloween facts and randomly display one.
+//GIF API:
+
+//Use the Giphy API to fetch and display Halloween-themed GIFs.
+//Example API endpoint:
+//https://api.giphy.com/v1/gifs/search?api_key=YOUR_API_KEY&q=halloween&limit=1
