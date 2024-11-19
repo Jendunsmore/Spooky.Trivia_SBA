@@ -30,15 +30,15 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Creepster', cursive; /* Spooky font */
-  background-color: #1a1a1a; /* Dark background */
-  color: #f4d03f; /* Pumpkin yellow text */
+  font-family: 'Creepster';
+  background-color: #1a1a1a;
+  color: #eaa017;
 }
 
 h1, .score h2 {
   font-family: 'Creepster', cursive;
   font-size: 3rem;
-  color: #f67280; /* Soft red */
+  color: #950b80;
   text-align: center;
   text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
@@ -48,7 +48,7 @@ button {
   color: #f4d03f; /* Yellow text */
   font-size: 1.2rem;
   padding: 10px 20px;
-  border: 2px solid #f67280; /* Red border */
+  border: 2px solid #723acd;
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.3s;
@@ -56,7 +56,7 @@ button {
 
 button:hover {
   transform: scale(1.1); /* Slight zoom */
-  background-color: #f67280; /* Soft red */
+  background-color: #0ab91b;
   color: white;
 }
 
@@ -66,13 +66,14 @@ button:hover {
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .fact-popup {
-  background-color: #2c3e50; /* Dark blue-gray */
-  color: #ecf0f1; /* Light text */
+  background-color: #222426;
+  color: #ce7c30;
   padding: 20px;
-  border: 2px dashed #e74c3c; /* Red dashed border */
+  border: 2px solid #5d554b;
   border-radius: 15px;
   animation: fadeIn o.5s ease-in-out forwards, glow 1s infinite alternate;
 }
