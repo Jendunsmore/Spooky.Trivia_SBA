@@ -38,7 +38,7 @@ Key Implementation Steps
 1. Clone the repository:
     git clone https://github.com/your-username/halloween-trivia.git
 2. Install Dependencies:
-    cd halloween-trivia
+    cd spooky-trivia
     npm install
 3. Start the development server:
     npm run dev
@@ -68,21 +68,24 @@ Scoring and Levels:
       - What happens if the Giphy API fails? Currently, the app shows a loading message indefinitely.
 
 📂 File Structure
-halloween-trivia/
+spooky-trivia/
 ├── public/
 │   └── index.html
 ├── src/
-│   ├── assets/          # Spooky styling assets (CSS, images, fonts)
-│   ├── components/      # Reusable UI components
-│   │   ├── QuestionCard.jsx
-│   │   ├── FactPopup.jsx
+│   ├── assets/                # Spooky styling assets (CSS, images, fonts)
+│   ├── components/            # Reusable UI components
+│   │   ├── Quest.jsx
+│   │   ├── Fact.jsx
 │   │   ├── GifDisplay.jsx
-│   │   └── ScoreSummary.jsx
-│   ├── pages/           # Main app pages
+│   │   └── Score.jsx
+|   ├── data/
+|   |   |── funFacts.js
+|   |   └── questions.jsx
+│   ├── pages/                # Main app pages
 │   │   └── GamePage.jsx
-│   ├── App.jsx          # Main app entry
-│   ├── index.css        # Global styles
-│   └── main.jsx         # ReactDOM rendering
+│   ├── App.jsx               # Main app entry
+│   ├── index.css             # Global styles
+│   └── main.jsx              # ReactDOM rendering
 ├── package.json
 ├── README.md
 └── vite.config.js
