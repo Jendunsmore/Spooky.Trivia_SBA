@@ -1,30 +1,12 @@
 import React, { useState } from 'react';
+import funFacts from '../data/funFacts';
+import questions from '../data/questions';
 import Question from '../components/Question';
 import Fact from '../components/Fact';
 import GifDisplay from '../components/GifDisplay';
 import Score from '../components/Score';
 
-const question = [
-    {
-        question: "What day is Halloween?",
-        options: ["October 30", "October 31", "November 1"],
-        answer: "October 31",
-    },
-    {
-        question: "What's the most popular Halloween candy?",
-        options: ["Snickers", "Candy Corn", "Reese's"],
-        answer: "Reese's",
-    },
-];
-// Add more questions
-
-const facts = [
-    "Halloween is the second most commercial holiday after Christmas.",
-    "Jack-o'-lanterns originated in Ireland.",
-    "The word 'witch' comes from the Old English wicce, meaning 'wise woman.'",
-];
-
-export default function GamePage() {
+function GamePage() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setScore] = useState(0);
     const [showFact, setShowFact] = useState(false);
@@ -34,7 +16,7 @@ export default function GamePage() {
         if (isCorrect) setScore(score + 1);
         setShowFact(true);
         setTimeout(() => {
-            if (currentQuestionIndex + 1 < question.length) {
+            if (currentQuestionIndex + 1 < questions.length) {
                 setCurrentQuestionIndex(currentQuestionIndex + 1);
                 setShowFact(false);
             } else {
@@ -51,12 +33,12 @@ export default function GamePage() {
                 <>
                     {showFact ? (
                         <>
-                            <Fact fact={facts[Math.floor(Math.random() * facts.length)]} />
+                            <Fact fact={funFacts[Math.floor(Math.random() * funFacts.length)]} />
                             <GifDisplay />
                         </>
                     ) : (
                         <Question
-                            question={question[currentQuestionIndex]}
+                            question={questions[currentQuestionIndex]}
                             onAnswer={handleAnswer}
                         />
                     )}
@@ -65,3 +47,5 @@ export default function GamePage() {
         </div>
     );
 }
+
+export default GamePage;

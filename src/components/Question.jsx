@@ -3,10 +3,14 @@
 
 import React from "react";
 
-export default function QuestionCard({ question, onAnswer }) {
+function Question({ question, onAnswer }) {
+    if (!question) {
+        return <div>Loading...</div>
+    }
+
     return (
         <div className="question-card">
-            <h2>{question.question}</h2>
+            <h2>{question.question}</h2> {/* Access question prop here*/}
             {question.options.map((option, index) => (
                 <button
                     key={index}
@@ -17,4 +21,6 @@ export default function QuestionCard({ question, onAnswer }) {
             ))}
         </div>
     );
-}
+};
+
+export default Question;
